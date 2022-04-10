@@ -5,6 +5,8 @@ html,
 body{
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 ul,
@@ -20,25 +22,32 @@ a {
 
 .wrapper{
     background:linear-gradient( to right,red 0%, red 30%, black 30%);
-    
     width: 100%;
     height: 100vh;
+    overflow: hidden;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .header{
     display: flex;
     justify-content: space-between;
-    padding-top: 81px;
+    align-items: center;
 }
 .header__info{
     display: flex;
+    align-items: center;
+    margin-top: 46px;
+    margin-left: 79px;
+    
 }
 .header__img-wrap{
-    margin-right: 21px;
-    margin-left: 74px;
-    
+   margin-right: 21px; 
 }
 .header__img{
     background-size: contain;
+
 }
 .header__text{
     font-style: normal;
@@ -46,28 +55,66 @@ a {
     font-size: 20px;
     line-height: 30px;
 }
-
+.nav{
+    display: flex;
+    margin-right: 209px;
+    margin-top: 73px;
+}
 .nav__list{
     display: flex;
 }
 .nav__item{
-    margin-right:  71px;
+    margin-left:  71px;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 27px;
 }
-
-.text__content-wrap{
-    display: flex;
-    align-items: center;
-    padding-left: 338px;
+.header__search{
+    margin-left: 54px;
+    position: relative;
+    width: 189px;
 }
-.text__content{
+.header__search::before{
+    content:'';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background-image: url(img/fi-rr-search\ 1.png);
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.header__search-input{
+    outline: none;
+    border: none;
+    background-color: #000000;
     color: #ffffff;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 350px;
-    line-height: 525px;
+    border-bottom: 1px solid #ffffff;
+    padding-left: 44px;
+    padding-bottom: 8px;
+    width: 100%;
+    font-size: 18px;
 }
-
+.header__search-input::placeholder{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #A8A8A8;
+}
+.content{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.title__content{
+font-weight: 600;
+font-size: 350px;
+line-height: 525px;
+color: #ffffff;
+margin-top: 111px;
+}
+.content__img{
+    margin-top: -655px;
+}
